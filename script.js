@@ -1,14 +1,26 @@
-var str = prompt("Введите любое число","100");
+var login = prompt("Введите логин:","");
 
-if(+str > 0)
+if(login == "Админ")
 {
-    alert(1);
+    var password = prompt("Введите пароль:");
+    if(password == "Черный Властелин")
+    {
+        alert("Доброе пожаловать, " + login);
+    }
+    else if(!password)
+    {
+        alert("Вход отменен");
+    }
+    else
+    {
+        alert("Пароль неверен!");
+    }
 }
-else if(+str == 0)
+else if(!login)
 {
-    alert(0);
+    alert("Вход отменен");
 }
 else
 {
-    alert(-1);
+    alert("Я вас не знаю!");
 }
