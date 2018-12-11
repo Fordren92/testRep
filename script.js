@@ -1,26 +1,6 @@
-var login = prompt("Введите логин:","");
+var login = prompt('Введите ваш логин','Вася');
 
-if(login == "Админ")
-{
-    var password = prompt("Введите пароль:");
-    if(password == "Черный Властелин")
-    {
-        alert("Доброе пожаловать, " + login);
-    }
-    else if(!password)
-    {
-        alert("Вход отменен");
-    }
-    else
-    {
-        alert("Пароль неверен!");
-    }
-}
-else if(!login)
-{
-    alert("Вход отменен");
-}
-else
-{
-    alert("Я вас не знаю!");
-}
+var message = (login == 'Вася') ? 'Привет' : 
+              (login == 'Директор') ? 'Здравствуйте' : 
+              (login == '') ? 'Нет логина' : '';
+alert(message);
