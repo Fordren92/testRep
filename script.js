@@ -1,6 +1,19 @@
-var login = prompt('Введите ваш логин','Вася');
+"use strict";
 
-var message = (login == 'Вася') ? 'Привет' : 
-              (login == 'Директор') ? 'Здравствуйте' : 
-              (login == '') ? 'Нет логина' : '';
-alert(message);
+var n = +prompt("Введите число","");
+var k = +prompt("Введите степень");
+
+function pow(n, k){
+    var res = 1;
+    for (var i = 0; i < k; i++){
+        res = res * n;
+    }
+    return alert(res);
+}
+
+if(n >= 1){
+    pow(n, k);
+}
+else{
+    alert("Вы ввели не действительное число!");
+}
