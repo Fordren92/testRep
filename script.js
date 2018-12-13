@@ -1,19 +1,23 @@
 "use strict";
 
 var n = +prompt("Введите число","");
-var k = +prompt("Введите степень");
 
-function pow(n, k){
-    var res = 1;
-    for (var i = 0; i < k; i++){
-        res = res * n;
+function sum(n){
+    var sum = 0;
+    for(var i = 0; i <= n; i++){
+        sum += i;
     }
-    return alert(res);
+    alert(sum);
 }
 
-if(n >= 1){
-    pow(n, k);
+function sum1(n){
+    if(n != 0){
+        return n + sum1(n-1)
+    }
+    else{
+        return n;
+    }
 }
-else{
-    alert("Вы ввели не действительное число!");
-}
+
+sum(n);
+alert(sum1(n));
