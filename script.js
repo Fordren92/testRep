@@ -1,23 +1,18 @@
-"use strict";
+'use strict';
 
-var n = +prompt("Введите число","");
-
-function sum(n){
-    var sum = 0;
-    for(var i = 0; i <= n; i++){
-        sum += i;
+function rle(string){
+    let counter = 1, result = '';
+    for(let i = 0; i < string.length; i++){
+        if(string[i] === string[i+1]){
+            counter++;
+        }else{
+            result += counter + string[i];
+            counter = 1;
+        }
     }
-    alert(sum);
+    return result;
 }
 
-function sum1(n){
-    if(n != 0){
-        return n + sum1(n-1)
-    }
-    else{
-        return n;
-    }
-}
-
-sum(n);
-alert(sum1(n));
+let input = prompt('Введите строку, которую необходимо сжать','');
+let res = rle(input);
+alert(res);
